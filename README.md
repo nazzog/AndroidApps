@@ -1,2 +1,2 @@
 # AndroidApps
-Repositório para teste de aplicativos android
+Repositório para teste de aplicativos para Android.
