@@ -7,14 +7,16 @@ package com.example.nazzog.helloworld;
 public class IdiomaActivity {
     private String nome;
     private int imagem;
+    private String hello;
 
     public IdiomaActivity(){
     }
 
-    public IdiomaActivity(String nome, int imagem){
+    public IdiomaActivity(String nome, int imagem, String hello){
         super();
         this.nome = nome;
         this.imagem = imagem;
+        this.hello = hello;
     }
 
     public String getNome(){
@@ -31,6 +33,14 @@ public class IdiomaActivity {
 
     public void setImagem(int imagem){
         this.imagem = imagem;
+    }
+
+    public String getHello(){
+        return hello;
+    }
+
+    public void setHello(String hello){
+        this.hello = hello;
     }
 
     @Override
