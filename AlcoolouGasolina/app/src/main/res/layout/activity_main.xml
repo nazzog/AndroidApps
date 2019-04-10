@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-<android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -55,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Preço Álcool, Ex: 3,18"
+            android:hint="Preço Álcool, Ex: 3.18"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
 
@@ -76,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Preço Gasolina, Ex: 4,05"
+            android:hint="Preço Gasolina, Ex: 4.05"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
 
@@ -105,4 +101,3 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bttCalcular" />
 </android.support.constraint.ConstraintLayout>
-</ScrollView>
