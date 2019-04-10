@@ -31,11 +31,17 @@ public class MainActivity extends AppCompatActivity {
         //Validar os campos digitados
         Boolean camposValidados = this.validarCampos(precoAlcool, precoGasolina);
         if(camposValidados){
-
+            this.calcularMelhorPreco(precoAlcool, precoGasolina);
         }
         else {
-
+            tvResposta.setText("Preencha os campos com os valores do Álcool e Gasolina primeiro.");
         }
+    }
+
+    public void calcularMelhorPreco(String pAlcool, String pGasolina){
+        //Converter calores string em numeros
+        Double precoAlcool = Double.parseDouble(pAlcool);
+        Double precoGasolina = Double.parseDouble(pGasolina);
     }
 
     public Boolean validarCampos(String pAlcool, String pGasolina){
