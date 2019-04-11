@@ -42,6 +42,15 @@ public class MainActivity extends AppCompatActivity {
         //Converter calores string em numeros
         Double precoAlcool = Double.parseDouble(pAlcool);
         Double precoGasolina = Double.parseDouble(pGasolina);
+
+        //Cálculo do melhor combustível a ser usado.
+        //Se resultado maior ou igual a 0.7 melhor usar gaasolina
+        Double resultado = precoAlcool / precoGasolina;
+        if(resultado >= 0.7){
+            tvResposta.setText("Melhor utilizar Gasolina!");
+        }
+        else
+            tvResposta.setText("Melhor utilizar Álcool!");
     }
 
     public Boolean validarCampos(String pAlcool, String pGasolina){
