@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_total;
     private SeekBar sk_gorjeta;
 
+    private double porcentagem;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
         sk_gorjeta.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                int porcentagem = seekBar.getProgress();
-                tv_porcentagem.setText(porcentagem + "%");
+                porcentagem = seekBar.getProgress();
+                tv_porcentagem.setText(Math.round(porcentagem) + "%");
+                calcular();
             }
 
             @Override
@@ -42,5 +45,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void calcular(){
+        double valorDigitado = Double.parseDouble(et_valor.getText().toString());
+        double gorjeta = valorDigitado * (porcentagem/100);
+        double total = gorjeta + valorDigitado;
+
+        tv_gorjeta.setText("R$ " + Math.round(gorjeta));
+        tv_total.setText("R$ " + total);
     }
 }
