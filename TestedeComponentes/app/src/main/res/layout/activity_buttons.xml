@@ -40,7 +40,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView9">
 
             <EditText
-                android:id="@+id/editText6"
+                android:id="@+id/editTextNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -75,14 +75,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView10">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radioMasculino"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Masculino" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioFeminino"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -103,7 +103,7 @@
             app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxPor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -113,7 +113,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <CheckBox
-            android:id="@+id/checkBox2"
+            android:id="@+id/checkBoxIng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -123,7 +123,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <CheckBox
-            android:id="@+id/checkBox3"
+            android:id="@+id/checkBoxEsp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -133,34 +133,34 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <CheckBox
-            android:id="@+id/checkBox4"
+            android:id="@+id/checkBoxFra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:text="Frances"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxPor" />
 
         <CheckBox
-            android:id="@+id/checkBox5"
+            android:id="@+id/checkBoxAle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:text="Alemão"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxIng" />
 
         <CheckBox
-            android:id="@+id/checkBox6"
+            android:id="@+id/checkBoxIta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:text="Italiano"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxEsp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline"
@@ -177,7 +177,7 @@
             app:layout_constraintGuide_percent="0.66" />
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/switchDark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -186,7 +186,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxFra" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayout2"
@@ -195,10 +195,10 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/textView13"
-            app:layout_constraintTop_toBottomOf="@+id/switch1">
+            app:layout_constraintTop_toBottomOf="@+id/switchDark">
 
             <EditText
-                android:id="@+id/editText7"
+                android:id="@+id/editTextNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -207,7 +207,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/textViewPorcent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -220,7 +220,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
         <SeekBar
-            android:id="@+id/seekBar2"
+            android:id="@+id/seekBarPorcent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -228,7 +228,7 @@
             android:layout_marginEnd="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintStart_toEndOf="@+id/textViewPorcent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
         <TextView
@@ -240,10 +240,10 @@
             android:text="Digite um Número"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch1" />
+            app:layout_constraintTop_toBottomOf="@+id/switchDark" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/textViewPorcentResposta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -253,19 +253,20 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
+            app:layout_constraintTop_toBottomOf="@+id/seekBarPorcent" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/bttGerar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
+            android:onClick="Gerar"
             android:text="Gerar"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewPorcentResposta" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -277,27 +278,22 @@
             android:layout_marginEnd="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button4" />
+            app:layout_constraintTop_toBottomOf="@+id/bttGerar" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textResposta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
             android:text="Nome"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/progressBar" />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:text="Sexo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
