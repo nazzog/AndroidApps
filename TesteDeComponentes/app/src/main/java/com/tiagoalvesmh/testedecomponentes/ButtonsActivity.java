@@ -19,6 +19,7 @@ public class ButtonsActivity extends AppCompatActivity {
     //Declarando Componentes
     private EditText edit_text_nome;
     private RadioGroup sexo;
+    private String radio;
     private RadioButton radio_masc;
     private RadioButton radio_fem;
     private CheckBox box_por;
@@ -59,19 +60,19 @@ public class ButtonsActivity extends AppCompatActivity {
         seek_bar = findViewById(R.id.seekBarPorcent);
         percentResposta = findViewById(R.id.textViewPorcentResposta);
         resposta = findViewById(R.id.textResposta);
+
+        //Verifica RadioButtons
+        verificaRadio();
     }
 
     public void Gerar(View view){
         //Recupera o nome digitado.
         String nome = edit_text_nome.getText().toString();
 
-        //Verifica RadioButtons
-        verificaRadio();
-
         //Método para verificação do CheckBox.
         verificaCheck();
 
-        resposta.setText(nome + ", do sexo "+", fala os idiomas: " + cb_list);
+        resposta.setText(nome + ", do sexo "+radio+", fala os idiomas: " + cb_list);
     }
 
     public void verificaCheck(){
@@ -98,12 +99,18 @@ public class ButtonsActivity extends AppCompatActivity {
     }
 
     public void verificaRadio(){
-        sexo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        sexo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                
+                //variavel 'checkedId' retorna o id do componente no RadioGroup
+                if(checkedId == R.id.radioMasculino){
+                    radio = radio_masc.getText().toString();
+                }
+
+                if(checkedId == R.id.radioFeminino){
+                    radio = radio_fem.getText().toString();
+                }
             }
         });
     }
-
 }
