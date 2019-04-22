@@ -1,7 +1,9 @@
 package com.tiagoalvesmh.testedecomponentes;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.style.BackgroundColorSpan;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -10,6 +12,7 @@ import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +37,7 @@ public class ButtonsActivity extends AppCompatActivity {
     private SeekBar seek_bar;
     private TextView percentResposta;
     private TextView resposta;
-
+    private double percent;
 
     //Outras variaveis
     List<String> cb_list = new ArrayList<String>();
@@ -63,6 +66,25 @@ public class ButtonsActivity extends AppCompatActivity {
 
         //Verifica RadioButtons
         verificaRadio();
+
+        seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                percent = seekBar.getProgress();
+                percentNum.setText(percent+"%");
+                calcularPorcentagem();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     public void Gerar(View view){
@@ -71,6 +93,8 @@ public class ButtonsActivity extends AppCompatActivity {
 
         //Método para verificação do CheckBox.
         verificaCheck();
+
+        verificaSwitch();
 
         resposta.setText(nome + ", do sexo "+radio+", fala os idiomas: " + cb_list);
     }
@@ -112,5 +136,29 @@ public class ButtonsActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void verificaSwitch(){
+        if(dark_mode.isChecked()){
+            Toast.makeText(this, "Você está no modo DARK!", Toast.LENGTH_LONG).show();
+        } else{
+
+        }
+    }
+
+    public void calcularPorcentagem(){
+        double valor = Double.parseDouble(numero.getText().toString());
+        double total = valor * (percent/100);
+        percentResposta.setText("Resultado: "+total);
+    }
+
+    public void proxima(View view){
+        Intent proxima = new Intent(this, ListviewActivity.class);
+        startActivity(proxima);
+    }
+
+    public void voltar(View view){
+        Intent voltar = new Intent(this, TextActivity.class);
+        startActivity(voltar);
     }
 }
