@@ -2,8 +2,10 @@ package com.tiagoalvesmh.testedecomponentes;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.LinearLayout;
 
 import com.tiagoalvesmh.testedecomponentes.adapter.AdapterPost;
 import com.tiagoalvesmh.testedecomponentes.model.Postagem;
@@ -23,8 +25,15 @@ public class CardviewActivity extends AppCompatActivity {
 
         recyclerPostagem = findViewById(R.id.recyclerPostagem);
 
-        //DEFINE LAYOUT
+        /*
+        * DEFINE UM LAYOUT EM GRID
+        * RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
+        * */
+
+        //DEFINE LAYOUT LINEAR
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        ((LinearLayoutManager) layoutManager).setOrientation(LinearLayout.HORIZONTAL);
+
         recyclerPostagem.setLayoutManager(layoutManager);
 
         //DEFINE ADAPTADOR
