@@ -10,32 +10,32 @@
         android:id="@+id/tv_sorteando"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Clique para sortear um número de 0 a 10"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.756" />
+        app:layout_constraintTop_toBottomOf="@+id/btt_sortear" />
 
     <Button
         android:id="@+id/btt_sortear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginTop="32dp"
         android:onClick="alteraTexto"
         android:text="SORTEAR"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_sorteando"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Tres" />
 
     <TextView
         android:id="@+id/tv_mensagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="82dp"
+        android:layout_marginTop="64dp"
         android:text="Nenhum número sorteado"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,14 +43,88 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_numero"
+        android:id="@+id/tv_Um"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:text="0"
-        android:textSize="52sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Dois"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mensagem" />
+
+    <TextView
+        android:id="@+id/tv_Dois"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Tres"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_Um"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mensagem" />
+
+    <TextView
+        android:id="@+id/tv_Tres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Quatro"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_Dois"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mensagem" />
+
+    <TextView
+        android:id="@+id/tv_Quatro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Cinco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_Tres"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mensagem" />
+
+    <TextView
+        android:id="@+id/tv_Cinco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Seis"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_Quatro"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mensagem" />
+
+    <TextView
+        android:id="@+id/tv_Seis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_Cinco"
         app:layout_constraintTop_toBottomOf="@+id/tv_mensagem" />
 
 </android.support.constraint.ConstraintLayout>
